@@ -25,6 +25,18 @@ class ViewController: UIViewController {
         circleView?.center = view.center
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        coordinator.animate(alongsideTransition: { (coordinator) in
+            if size.width > size.height {
+                // 横向きなら
+                self.circleView?.center.x = self.view.center.x + 100
+            } else {
+                // 縦向きなら
+                self.circleView?.center = self.view.center
+            }
+        }, completion: nil)
+    }
     
 }
 
