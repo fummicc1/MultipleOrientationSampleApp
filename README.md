@@ -32,7 +32,7 @@ class ViewController: UIViewController {
 ### デモ
 ![demo](https://media.giphy.com/media/XfW5dXZ1m1XbukKxqs/giphy.gif)
 
-## viewWillLayoutSubviewsのメソッド内でレイアウト処理を実装すれば、この時点ではusperViewのframeが正確に取得できるので期待したレイアウトになる。
+## viewWillLayoutSubviewsのメソッド内でレイアウト処理を実装すれば、この時点ではsuperViewのframeが正確に取得できるので期待したレイアウトになる。
 
 ### ソースコード
 
