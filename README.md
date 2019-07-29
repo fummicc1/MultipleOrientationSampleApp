@@ -1,4 +1,4 @@
-# MultipluOrientationSampleApp
+# MultipleOrientationSampleApp (ソースコードの方typooooo...してた......)
 
 ## ViewDidLoadでframeをCenterに設定しても、レイアウトが確定していないので安定したレイアウトとならない。
 
