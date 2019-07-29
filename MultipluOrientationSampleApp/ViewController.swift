@@ -19,6 +19,12 @@ class ViewController: UIViewController {
         guard let circleView = circleView else { return }
         view.addSubview(circleView)
     }
-
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        circleView?.center = view.center
+    }
+    
+    
 }
 
