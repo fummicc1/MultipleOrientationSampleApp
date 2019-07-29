@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,89 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MultipluOrientationSampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4mO-3i-KJc">
+                                <rect key="frame" x="0.0" y="44" width="207" height="160"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.95306998239999996" blue="0.68373129399999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="1lZ-ka-yfE"/>
+                                    <constraint firstAttribute="height" constant="160" id="2ts-B5-CR7"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1lZ-ka-yfE"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="1lZ-ka-yfE"/>
+                                        <exclude reference="2ts-B5-CR7"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oba-P7-4cb">
+                                <rect key="frame" x="207" y="44" width="207" height="160"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.7952244718" blue="0.4461377641" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="SyX-Xa-15b"/>
+                                    <constraint firstAttribute="width" constant="320" id="u76-38-dI8"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="u76-38-dI8"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="SyX-Xa-15b"/>
+                                        <include reference="u76-38-dI8"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oba-P7-4cb" firstAttribute="top" secondItem="4mO-3i-KJc" secondAttribute="bottom" id="1VF-pE-FHe"/>
+                            <constraint firstItem="4mO-3i-KJc" firstAttribute="width" secondItem="oba-P7-4cb" secondAttribute="width" id="4iR-C1-McQ"/>
+                            <constraint firstItem="4mO-3i-KJc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Bis-B7-mpr"/>
+                            <constraint firstItem="oba-P7-4cb" firstAttribute="height" secondItem="4mO-3i-KJc" secondAttribute="height" id="Nbi-KJ-PD8"/>
+                            <constraint firstItem="oba-P7-4cb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Nk8-b6-1yM"/>
+                            <constraint firstItem="oba-P7-4cb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aG2-ic-S8a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oba-P7-4cb" secondAttribute="trailing" id="dFh-A3-xcB"/>
+                            <constraint firstItem="4mO-3i-KJc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kUT-qh-DIz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oba-P7-4cb" secondAttribute="bottom" id="wet-S1-Iwt"/>
+                            <constraint firstItem="oba-P7-4cb" firstAttribute="leading" secondItem="4mO-3i-KJc" secondAttribute="trailing" id="xm6-pN-xfu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="wet-S1-Iwt"/>
+                                <exclude reference="1VF-pE-FHe"/>
+                                <exclude reference="Nbi-KJ-PD8"/>
+                                <exclude reference="Nk8-b6-1yM"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="4iR-C1-McQ"/>
+                                <exclude reference="dFh-A3-xcB"/>
+                                <include reference="wet-S1-Iwt"/>
+                                <include reference="1VF-pE-FHe"/>
+                                <include reference="Nbi-KJ-PD8"/>
+                                <include reference="Nk8-b6-1yM"/>
+                                <exclude reference="aG2-ic-S8a"/>
+                                <exclude reference="xm6-pN-xfu"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
         </scene>
     </scenes>
 </document>
